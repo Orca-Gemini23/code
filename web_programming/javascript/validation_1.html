@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            E224
+        </title>
+    </head>
+    <script>
+        function validate() {
+            var n = document.forms.xform.name.value;
+            if(n == ""){
+                window.alert("Please enter the name");
+                n.focus();
+                return false;
+            }
+
+            var password = document.forms.xform.password.value;
+                        // JavaScript Retype Password Validation 
+            var fpass = document.forms.xform.fpass.value;
+            if(password == fpass){
+                window.alert("You are good to go");
+            }else{
+                window.alert("The password doesn't match");
+            }
+
+            // JavaScript Number Validation
+
+            var number = document.forms.xform.num.value;
+            
+            if(isNan(number)){
+                window.alert("You are good to go");
+            }else{
+                window.alert("Yes correct");
+            }
+
+            // Email validation :: 
+            
+        }
+    </script>
+    <body>
+        <!-- The name can’t be empty and 
+            password can’t be less than 6 characters long.-->
+            <form name = "xform" onclick = "return validate()">
+                <table>
+                    <tr>
+                        <td>
+                            Enter name : 
+                        </td>
+                        <td>
+                            <input name = "name" id = "name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter the password
+                        </td>
+                        <td>
+                            <input name = "password" type = "password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Confirm password
+                        </td>
+                        <td>
+                            <input name = "fpass" type = "password"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Age: 
+                        </td>
+                        <td>
+                            <input type = "number" name = "number">
+                        </td>
+                    </tr>
+                </table>
+                <center>
+                    <input type = "submit">
+                </center>
+            </form>
+    </body>
+</html>
