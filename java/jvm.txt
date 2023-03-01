@@ -1,0 +1,49 @@
+JVM is ta run time engine to run java applications. 
+Jbm is the one that actually calls the "main" method present in the java code . 
+
+Also called as wora (write once and run anywhere). The java compiler creates a .class file
+which contains the byte code and it goes into various steps when we run it. 
+
+-- Class loader subsystem has three main components :: 
+1. Loading 
+2. Linking 
+3. Initialisation 
+
+Loading :: The .class file reads the .class file and generate the corresponding binary data 
+and saves it in the method area. 
+Har ek binary data ke liye banta hai ye.. 
+
+After the class file is loaded in the class loader, the class files creates object of the class 
+file to represent the file in the heap memory. This object is of type class in (java.lang.error).
+
+Linking :: performs verification 
+-- verification - if the file is correct then the file is passed, it not then the compiler gives 
+the java lang verify error. This activity is done by the component bytecodeverifier. 
+-- preparation -- jvm allocates memory for class static vars and Initialisation of the memory to 
+default values. 
+
+resolution - -it is the process of replacing symbolic references from the type with direct 
+references. 
+
+Initialisation :: In this phase, all static vars are assigned with their values in defined in the code 
+
+Three types of class loaders  ::
+-- Bootstrap class loader 
+-- Extension class loader 
+-- System application class loader 
+
+JVM folles the DELEGATION HIERACHY principle to load the classes. System class loader delegate load 
+request to extension class loader and extension class loader delegate request to the bootp class loader. 
+
+## types of area memory in jvm ## 
+-- Method area
+-- heap area
+-- stack area
+-- pc registers 
+-- native method stacks 
+
+Execution engine :: Executes the class bytecode. It reads the byte code line by line 
+uses data and information present in various memory. 
+-- Interpreter 
+-- Just in time compiler 
+-- garbage collector 

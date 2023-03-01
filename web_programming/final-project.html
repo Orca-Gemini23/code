@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>
+        E224
+    </title>
+    <script>
+        function validation() {
+            var x = document.forms.xform.first_name.value;
+            if (x == "") {
+                window.alert("Please enter the first name");
+                x.focus();
+                return false;
+            }
+            var ln = document.forms.xform.last_name.value;
+            if (ln == "") {
+                window.alert("Please enter the last name");
+                ln.focus;
+                return false;
+            }
+            
+            var mail = document.forms.xform.mail.value;
+            var atposition = mail.indexOf("@");
+            var dotposition = mail.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= mail.length) {
+                alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+                return false;
+            }
+        }
+
+        var a = document.forms.xform.age.value;
+        if(isNaN(a)){
+            document.getElementById("numloc").innerHTML = value;
+            return false;
+        }else{
+            return true;
+        }
+
+        var fpassword = document.forms.xform.fpassword.value;
+        var spassword = document.forms.xform.spassword.value;
+
+        if (fpassword.length < 6) {
+            alert("Enter a long password");
+            return false;
+        }
+
+        if (fpassword == spassword) {
+            return true;
+        } else {
+            alert("password must be same");
+            return false;
+        }
+        
+    </script>
+    <link rel="stylesheet" href="/web_programming/javascript/styling.css">
+</head>
+
+<body>
+    <center>
+        <form name="xform" onsubmit="return validation()">
+            <table>
+                <tr>
+                    <td>
+                        <label for="first_name">First name:</label>
+                    </td>
+                    <td>
+                        <input name="first_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="last_name">Last name: </label>
+                    </td>
+                    <td>
+                        <input name="last_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age: </label>
+                    </td>
+                    <td>
+                        <input name="age" type=number>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mail">Email: </label>
+                    </td>
+                    <td>
+                        <input name="mail" type = "email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fpassword">Enter the password: </label>
+                    </td>
+                    <td>
+                        <input name="fpassword" type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="spassword">Confirm the password: </label>
+                    </td>
+                    <td>
+                        <input name="spassword" type="password">
+                    </td>
+                </tr>
+            </table>
+            <input type=submit>
+        </form>
+    </center>
+</body>
+</head>
+
+</html>

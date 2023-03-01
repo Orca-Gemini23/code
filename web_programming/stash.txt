@@ -1,0 +1,6 @@
+// console log 
+-- dont use it for debugging , algorithms are usually debugging to automate a large number 
+of small tasks loops and recusrion begin fundamental buildin blocks for this. along with consolel log 
+it resuls in a lrge number of lines displayed in front of you, hard time to find the right information 
+
+    

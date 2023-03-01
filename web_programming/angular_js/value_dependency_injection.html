@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            E224
+        </title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <!-- using the value dependency injection-->
+    <body ng-app = "myApp">
+        <!-- Adding controller and the directive module too-->
+        <div ng-controller = "ctrl">
+            Enter the first name : 
+            <input type = "text" ng-model = "t" />
+            Enter the second name:
+            <input type = "text" ng-model = "e" />
+
+            The full name is: {{t + e}}
+        </div>
+
+        <script>
+            // adding a controller 
+            var x = angular.module('myApp', []);
+            x.controller('ctrl', function($scope){
+                $scope.t = "nothing";
+                $scope.e = "hurts me";
+            })
+        </script>
+    </body>
+</html>
